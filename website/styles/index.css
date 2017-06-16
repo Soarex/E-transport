@@ -1,0 +1,55 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0px 5px 5px grey;
+    background-color: #333;
+}
+
+content {
+    position: fixed;
+    top: 3em;
+    font-size: 2em;
+}
+
+.nav_links, .nav_user {
+    list-style-type: none;
+    overflow: hidden;
+}
+
+.nav_links li {
+    float: left;
+}
+
+.nav_user li {
+    float: right;
+}
+
+.nav_links li a {
+    display: inline-block;
+    color: #aaaaaa;
+    text-align: center;
+    font-size: 1em;
+    text-decoration: none;
+    padding: 1.5em 3em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+    font-family: "montserrat", arial, sans-serif;
+}
+
+.nav_links li a:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#logo {
+    padding: 0.5em 3em;
+}
+
+#logo img {
+    height: 2.5em;
+}

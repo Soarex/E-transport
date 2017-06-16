@@ -1,0 +1,38 @@
+body {
+    position: absolute;
+    left: 42%;
+    top: 10%;
+    background-color: #f2f2f2;
+    font-family: "montserrat", arial, sans-serif;
+}
+
+#logo img {
+    height: 3em;
+    margin-left: 13%;
+}
+
+div {
+    text-align: center;
+    margin-top: 10%;
+    padding: 1em;
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #ffffff;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #0066ff;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+input[type=text], [type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
