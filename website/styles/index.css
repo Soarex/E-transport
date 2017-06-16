@@ -53,3 +53,15 @@ content {
 #logo img {
     height: 2.5em;
 }
+
+#user_icon {
+    padding: 0.5em 3em 0.5em 1em;
+}
+
+#user_name {
+    padding: 1.5em 1em 1.5em 3em;
+}
+
+#user_icon img {
+    height: 2.5em;
+}
