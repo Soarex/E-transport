@@ -1,3 +1,11 @@
+* {
+    box-sizing: border-box;
+    font-family: "montserrat", arial, sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+}
 header {
     position: fixed;
     top: 0;
@@ -37,8 +45,6 @@ content {
     padding: 1.5em 3em;
     text-transform: uppercase;
     letter-spacing: 1px;
-    
-    font-family: "montserrat", arial, sans-serif;
 }
 
 .nav_links li a:hover {
@@ -64,4 +70,64 @@ content {
 
 #user_icon img {
     height: 2.5em;
+}
+
+#user_info {
+    position:fixed;
+    height: 100%; 
+    width: 30%; 
+}
+
+#user_info table {
+    margin-left:4em;
+    margin-top:5em;
+}
+
+#card_info {
+    position:fixed;
+    margin-left:30%;
+    height: 100%; 
+    width: 70%; 
+}
+
+.div_info_carta {
+    margin-top:1em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #ffffff;
+    width: 60%;
+    border-radius: 10px;
+}
+
+.div_info_carta table {
+    width:100%;
+    text-align:center;
+}
+
+#icona_carta {
+    height:3em;
+}
+
+#table_username {
+    font-size: 1em;
+}
+
+th {
+    padding: 0.3em;
+}
+
+#table_email {
+    color: grey;
+    font-weight: lighter;
+    font-size: 0.5em;
+    font-style: oblique;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #333;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
 }

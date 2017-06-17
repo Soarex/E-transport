@@ -10,6 +10,10 @@ class Database {
          return $res;
      }
 
+     public function close() {
+         return mysqli_close($this->connection);
+     }
+
      public function query($query) {
          return mysqli_query($this->connection, $query);
      }
