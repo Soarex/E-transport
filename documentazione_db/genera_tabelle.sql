@@ -84,7 +84,7 @@ CREATE TABLE Autista (
 	data_nascita DATE NOT NULL,
 	iban VARCHAR(34) NOT NULL,
 	email VARCHAR(254) NOT NULL,
-	numero_documento VARCHAR(9) NOT NULL,
+	numero_documento VARCHAR(9) NOT NULL UNIQUE,
 	id_indirizzo INT UNSIGNED NOT NULL,
 	PRIMARY KEY (id),
 	FOREIGN KEY (id_indirizzo)
@@ -97,9 +97,9 @@ CREATE TABLE Cliente (
 	id INT UNSIGNED NOT NULL,
 	nome VARCHAR(25) NOT NULL,	
 	cognome VARCHAR(25) NOT NULL,	
-	email VARCHAR(254) NOT NULL,
+	email VARCHAR(254) NOT NULL UNIQUE,
 	password VARCHAR(32) NOT NULL,
-	numero_documento VARCHAR(9) NOT NULL,
+	numero_documento VARCHAR(9) NOT NULL UNIQUE,
 	id_indirizzo INT UNSIGNED NOT NULL,
 	PRIMARY KEY (id),
 	FOREIGN KEY (id_indirizzo)
@@ -170,7 +170,7 @@ CREATE TABLE Presenza (
 CREATE TABLE Metodo_pagamento (
 	id INT UNSIGNED NOT NULL,
 	tipo_carta ENUM("visa", "mastercard", "postepay", "maestro", "american_express") NOT NULL,
-	numero_carta VARCHAR(16) NOT NULL,
+	numero_carta VARCHAR(16) NOT NULL UNIQUE,
 	nome_titolare VARCHAR(25) NOT NULL,
 	data_scadenza DATE NOT NULL,
 	id_indirizzo INT UNSIGNED NOT NULL,
