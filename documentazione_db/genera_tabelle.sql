@@ -5,7 +5,7 @@ CREATE TABLE Tratta (
 ) ENGINE = INNODB;
 
 CREATE TABLE Tratta_urbano (
-	citta VARCHAR(50) NOT NULL,
+	citta VARCHAR(50) NOT NULL UNIQUE,
 	id_tratta INT UNSIGNED NOT NULL,
 	PRIMARY KEY (id_tratta),
 	FOREIGN KEY (id_tratta)
@@ -19,6 +19,7 @@ CREATE TABLE Tratta_extraurbano (
 	a_km SMALLINT UNSIGNED NOT NULL,	
 	id_tratta INT UNSIGNED NOT NULL,
 	PRIMARY KEY (id_tratta),
+	UNIQUE (da_km, a_km),
 	FOREIGN KEY (id_tratta)
 		REFERENCES Tratta(id)
 		ON DELETE CASCADE
@@ -30,6 +31,7 @@ CREATE TABLE Tratta_metro (
 	a_zona TINYINT UNSIGNED NOT NULL,	
 	id_tratta INT UNSIGNED NOT NULL,
 	PRIMARY KEY (id_tratta),
+	UNIQUE (da_zona, a_zona),
 	FOREIGN KEY (id_tratta)
 		REFERENCES Tratta(id)
 		ON DELETE CASCADE
@@ -41,6 +43,7 @@ CREATE TABLE Tratta_treno (
 	a VARCHAR(50) NOT NULL,	
 	id_tratta INT UNSIGNED NOT NULL,
 	PRIMARY KEY (id_tratta),
+	UNIQUE (da, a),
 	FOREIGN KEY (id_tratta)
 		REFERENCES Tratta(id)
 		ON DELETE CASCADE
@@ -48,7 +51,7 @@ CREATE TABLE Tratta_treno (
 ) ENGINE = INNODB;
 
 CREATE TABLE Tratta_tram (
-	citta VARCHAR(50) NOT NULL,
+	citta VARCHAR(50) NOT NULL UNIQUE,
 	id_tratta INT UNSIGNED NOT NULL,
 	PRIMARY KEY (id_tratta),
 	FOREIGN KEY (id_tratta)
@@ -62,6 +65,7 @@ CREATE TABLE Tratta_traghetto (
 	a VARCHAR(50) NOT NULL,	
 	id_tratta INT UNSIGNED NOT NULL,
 	PRIMARY KEY (id_tratta),
+	UNIQUE (da, a),
 	FOREIGN KEY (id_tratta)
 		REFERENCES Tratta(id)
 		ON DELETE CASCADE
@@ -112,7 +116,7 @@ CREATE TABLE Carta_trasporto (
 	numero_carta VARCHAR(16) NOT NULL,
 	saldo DECIMAL NOT NULL,	
 	data_rilascio DATE NOT NULL,
-	id_proprietario INT UNSIGNED NOT NULL,
+	id_proprietario INT UNSIGNED,
 	PRIMARY KEY (numero_carta),
 	FOREIGN KEY (id_proprietario)
 		REFERENCES Cliente(id)
@@ -180,6 +184,22 @@ CREATE TABLE Metodo_pagamento (
 		ON DELETE CASCADE
 		ON UPDATE CASCADE,
 	FOREIGN KEY (id_cliente)
+		REFERENCES Cliente(id)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE
+) ENGINE = INNODB;
+
+CREATE TABLE Abbonamento (
+	id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+	data_scadenza DATE NOT NULL,
+	id_tratta INT UNSIGNED NOT NULL,
+	id_proprietario INT UNSIGNED NOT NULL,
+	PRIMARY KEY (id),
+	FOREIGN KEY (id_tratta)
+		REFERENCES Tratta(id)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE,
+	FOREIGN KEY (id_proprietario)
 		REFERENCES Cliente(id)
 		ON DELETE CASCADE
 		ON UPDATE CASCADE
