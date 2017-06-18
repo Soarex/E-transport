@@ -30,7 +30,8 @@
           for($i = 0; $i < $result->num_rows; $i++) {
             $data = $result->fetch_assoc();
             echo '<div class="div_info_carta"><table>';
-            echo '<tr class="table_numero_carta"><th rowspan="2"><img src="res/card.png" id="icona_carta" /></th><th colspan="2">Carta N°: '.$data['numero_carta'].'</th></tr>';
+            echo '<tr class="table_numero_carta"><th rowspan="2"><img src="res/card.png" id="icona_carta" /></th>
+                    <th colspan="2">Carta N°: '.chunk_split($data['numero_carta'], 4, " ").'</th></tr>';
             echo '<tr class="table_info"><th>Saldo: €'.$data['saldo'].'</th><th>Rilasciata il: '.$data['data_rilascio'].'</th></tr>';
             echo '</table></div>';
           }

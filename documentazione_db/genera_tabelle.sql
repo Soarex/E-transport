@@ -123,7 +123,6 @@ CREATE TABLE Carta_trasporto (
 CREATE TABLE LettoreNFC (
 	numero_serie VARCHAR(25) NOT NULL,
 	data_installazione DATE NOT NULL,	
-	transazioni_effettuate INT UNSIGNED NOT NULL,
 	PRIMARY KEY (numero_serie)
 ) ENGINE = INNODB;
 
