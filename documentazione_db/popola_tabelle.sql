@@ -37,4 +37,4 @@ INSERT INTO Tratta(id, costo) VALUES (
     (5, 1.50),
 
     --Tratte extraurbano
-)
+);
