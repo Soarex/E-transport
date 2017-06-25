@@ -3,6 +3,7 @@
 
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="../styles/sign_up.css"> </link>
     <link rel="icon" href="../res/icona.png"> </link>
     <title>Log in</title>
@@ -15,23 +16,23 @@
         <div>
           <form action="sign_up.php" method="POST">
             Email: <br>
-            <input type="email" name="email" placeholder="" /> <br>
+            <input type="email" name="email" maxlength="254" placeholder="" required /> <br>
             Password: <br>
-            <input type="password" name="password" placeholder="" /> <br>
+            <input type="password" name="password" maxlength="32" pattern="[a-zA-Z0-9]{1, 25}" title="Può contenere solo caratteri alfanumerici e max 32 caratteri" placeholder="" required /> <br>
             Nome: <br>
-            <input type="text" name="nome" placeholder="" /> <br>
+            <input type="text" name="nome" maxlength="25" placeholder="" required /> <br>
             Cognome: <br>
-            <input type="text" name="cognome" placeholder="" /> <br>
+            <input type="text" name="cognome" maxlength="25" placeholder="" required /> <br>
             Numero documento: <br>
-            <input type="text" name="numero_documento" placeholder="" /> <br>
+            <input type="text" name="numero_documento" pattern="[a-zA-Z0-9]{9}" title="Può contenere solo caratteri alfanumerici e deve essere di 9 caratteri" maxlength="9" placeholder="" required /> <br>
             Via: <br>
-            <input type="text" name="via" placeholder="" /> <br>
+            <input type="text" name="via"  maxlength="25" pattern="[a-zA-Z0-9]{1, 25}" title="Può contenere solo caratteri alfanumerici e max 25 caratteri" placeholder="" required /> <br>
             Provincia: <br>
-            <input type="text" name="provincia" placeholder="" /> <br>
+            <input type="text" name="provincia" maxlength="25" pattern="[0-9]{1, 25}" title="Può contenere solo caratteri alfabetici e max 25 caratteri" placeholder="" required /> <br>
             Citta: <br>
-            <input type="text" name="citta" placeholder="" /> <br>
+            <input type="text" name="citta" maxlength="25" pattern="[0-9]{1, 25}" title="Può contenere solo caratteri alfabetici e max 25 caratteri" placeholder="" required /> <br>
             Cap: <br>
-            <input type="number" name="via" placeholder="" /> <br>
+            <input type="number" name="cap" maxlength="5" pattern="[0-9]{5}" title="Può contenere solo caratteri numerici e deve essere di 5 cifre" placeholder="" required /> <br>
             <input type="submit" name="submit" value="Log in" /> <br>
           </form>
         </div>
