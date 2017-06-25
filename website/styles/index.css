@@ -3,50 +3,24 @@
     font-family: "montserrat", arial, sans-serif;
 }
 
-.row::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-[class*="col-"] {
-    float: left;
-    padding: 15px;
-}
-
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10 {width: 83.33%;}
-.col-11 {width: 91.66%;}
-.col-12 {width: 100%;}
-
-body, html {
+body {
     background-color: #f2f2f2;
-    height:100%;
-    width:100%;
-    margin: 0;
 }
-
 header {
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 0.01%;
+    margin: 0;
+    padding: 0;
     box-shadow: 0px 5px 5px grey;
     background-color: #333;
 }
 
-#content {
+content {
+    position: fixed;
+    top: 3em;
     font-size: 2em;
-    height: 100%;
-    width:100%;
 }
 
 .nav_links, .nav_user {
@@ -99,43 +73,34 @@ header {
 }
 
 #user_info {
-    float: left; 
-    width: 30%;
-    height: 100%;
-
+    position:fixed;
+    height: 100%; 
+    width: 30%; 
 }
 
 #user_info table {
-    margin-left: 25%;
-    margin-top: 40%;
+    margin-left:4em;
+    margin-top:5em;
 }
 
 #card_info {
-    margin-top: 3%;
-    float: left;
-    width: 70%;
-    height: 100%;
-
+    position:fixed;
+    margin-left:30%;
+    height: 100%; 
+    width: 70%; 
 }
 
 .div_info_carta {
+    margin-top:1em;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: #ffffff;
     width: 60%;
     border-radius: 10px;
-    margin-top: 2%;
-    cursor: pointer;
 }
 
 .div_info_carta table {
     width:100%;
     text-align:center;
-}
-
-.table_info {
-    font-size: 70%;
-    color: grey;
-    font-weight: lighter;
 }
 
 #icona_carta {
@@ -166,68 +131,3 @@ input[type=button], input[type=submit], input[type=reset] {
     margin: 4px 2px;
     cursor: pointer;
 }
-
-input[type=text], [type=password], [type=email], [type=number] {
-    width: 63%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-}
-
-#add_card_form {
-    width: 80%;
-}
-
-#tratte_buttons {
-    float: left; 
-    width: 30%;
-    height: 100%;
-
-}
-
-#tratte_info {
-    margin-top: 3%;
-    float: left;
-    width: 70%;
-    height: 100%;
-}
-
-#tratte_buttons ul {
-    list-style-type: none;
-    width:100%;
-    height:100%;
-    padding: 0 10%;
-}
-
-#tratte_buttons ul li {
-    float: left;
-    width:100%;
-    margin-top: 7%;
-}
-
-#tratte_buttons ul li input[type=button]{
-    width:100%;
-}
-
-#tratte_info h1 {
-    margin-left: 33%;
-    font-size: 1.3em;
-}
-
-#tratte_info table {
-    border-collapse: collapse;
-    margin-left:5%;
-    width: 80%;
-    font-size: 0.6em;
-}
-
-#tratte_info table tr {
-    width:100%;
-}
-
-#tratte_info table tr th{
-    text-align: center;
-    padding: 1%;
-}
-
-#tratte_info table tr:nth-child(even){background-color: #cccccc} 

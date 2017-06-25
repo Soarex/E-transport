@@ -28,20 +28,13 @@ INSERT INTO LettoreNFC(numero_serie, data_installazione) VALUES (
     ("Y2578425", "2017-09-23")
 );
 
-INSERT INTO Tratta(id, costo) VALUES 
+INSERT INTO Tratta(id, costo) VALUES (
     --Tratte pullman urbano
     (1, 1.30),
     (2, 2.00),
     (3, 1.40),
     (4, 1.30),
-    (5, 1.50);
+    (5, 1.50),
 
     --Tratte extraurbano
-
-
-INSERT INTO Tratta_urbano(citta, id_tratta) VALUES 
-    ("Cagliari", 1),
-    ("Iglesias", 2),
-    ("Milano", 3),
-    ("Pisa", 4),
-    ("Roma", 5);
+);
