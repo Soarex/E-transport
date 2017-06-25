@@ -22,9 +22,46 @@ function load_home() {
 }
 
 function load_tratte() {
-    $("#content").load("src/tratte_page.php");
+    $("#content").load("src/tratte_page.html");
+    tratte_urbane();
 }
 
 function logout() {
     window.location.href='src/log_out.php'
+}
+
+function tratte_urbane() {
+    $.get("src/tratte_page.php", {tratta: "tratta_urbano"}, function(data) {
+        $("#tratte_info").html(data);
+    });
+}
+
+function tratte_extraurbane() {
+    $.get("src/tratte_page.php", {tratta: "tratta_extraurbano"}, function(data) {
+        $("#tratte_info").html(data);
+    });
+}
+
+function tratte_treni() {
+    $.get("src/tratte_page.php", {tratta: "tratta_treno"}, function(data) {
+        $("#tratte_info").html(data);
+    });
+}
+
+function tratte_metro() {
+    $.get("src/tratte_page.php", {tratta: "tratta_metro"}, function(data) {
+        $("#tratte_info").html(data);
+    });
+}
+
+function tratte_tram() {
+    $.get("src/tratte_page.php", {tratta: "tratta_tram"}, function(data) {
+        $("#tratte_info").html(data);
+    });
+}
+
+function tratte_traghetto() {
+    $.get("src/tratte_page.php", {tratta: "tratta_traghetto"}, function(data) {
+        $("#tratte_info").html(data);
+    });
 }
