@@ -41,7 +41,6 @@
     $user->password = $_POST['password'];
     $user->nome = $_POST['nome'];
     $user->cognome = $_POST['cognome'];
-    $user->recapito = $_POST['recapito'];
     $user->numero_documento = $_POST['numero_documento'];
     $user->id = $_POST['id'];
     $user->via = $_POST['via'];

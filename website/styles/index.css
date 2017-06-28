@@ -34,6 +34,33 @@ body, html {
     margin: 0;
 }
 
+#banner {
+    width:100%;
+    height:80%; 
+    text-align: center;
+}
+
+.card {
+    width: 16%;
+    height: 46%;
+    float: left;
+    padding: 1%;
+    margin-left: 13%;
+}
+
+.card img{
+    height:50%;
+}
+
+#banner h2 {
+    font-size: 2em;
+    font-weight: lighter;
+    margin: 0;
+    color: black;
+    padding-top: 8%;
+    padding-bottom: 5%;
+}
+
 header {
     top: 0;
     left: 0;
@@ -106,8 +133,26 @@ header {
 }
 
 #user_info table {
-    margin-left: 25%;
+    margin-left: 10%;
     margin-top: 40%;
+    width: 80%;
+    text-align: center;
+}
+
+#user_info table tr{
+    width:100%;
+}
+
+#user_info table tr th{
+    width:50%;
+}
+
+#user_info #table_username th{
+    width:100%;
+}
+
+#user_info table tr th input[type=button] {
+    width:100%;
 }
 
 #card_info {
@@ -115,13 +160,12 @@ header {
     float: left;
     width: 70%;
     height: 100%;
-
 }
 
 .div_info_carta {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     background-color: #ffffff;
-    width: 60%;
+    width: 90%;
     border-radius: 10px;
     margin-top: 2%;
     cursor: pointer;
@@ -167,7 +211,7 @@ input[type=button], input[type=submit], input[type=reset] {
     cursor: pointer;
 }
 
-input[type=text], [type=password], [type=email], [type=number] {
+input[type=text], [type=password], [type=email], [type=number], select{
     width: 63%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -175,7 +219,7 @@ input[type=text], [type=password], [type=email], [type=number] {
 }
 
 #add_card_form {
-    width: 80%;
+    width: 126%;
 }
 
 #tratte_buttons {
@@ -231,3 +275,44 @@ input[type=text], [type=password], [type=email], [type=number] {
 }
 
 #tratte_info table tr:nth-child(even){background-color: #cccccc} 
+
+.div_op_carta {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #ffffff;
+    width: 90%;
+    margin-top: 2%;
+    font-size: 0.7em;
+    padding:1%;
+}
+
+.div_op_carta table {
+    width:100%;
+}
+
+.div_op_carta tr, .div_op_carta th {
+   padding: 0;
+}
+
+#add_method_form {
+    width:95%;
+}
+
+#add_method_form table{
+    width:100%;
+    border-collapse: collapse;
+    border:0;
+    padding:0;
+}
+
+#add_method_form table tr{
+    width:100%;
+}
+
+#add_method_form table tr th{
+    width: 25%;
+    padding: 0%;
+}
+
+#add_method_form table tr th input[type=text], #add_method_form table tr th input[type=number], #add_method_form table tr th select{
+    width: 97%;
+}
