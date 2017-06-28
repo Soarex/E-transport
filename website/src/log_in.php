@@ -50,6 +50,6 @@
 
     $_SESSION['logged_user'] = $user;
     $database->close();
-    header("Location: http://localhost/E-transport/website/index.html");
+    echo "<script>window.location.href='../index.html';</script>";
 ?>
 </html>

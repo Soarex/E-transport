@@ -36,13 +36,21 @@
        '".$_POST['numero_documento']."', '".$_POST['via']."', '".$_POST['citta']."', '".$_POST['provincia']."', '".$_POST['cap']."')"
     );
 
+    $result = $database->query(
+       "SELECT id
+        FROM cliente
+        WHERE email ='".$_POST['email']."'"
+    );
+
+    $data = $result->fetch_array();
+
     $user = new User();
     $user->email = $_POST['email'];
     $user->password = $_POST['password'];
     $user->nome = $_POST['nome'];
     $user->cognome = $_POST['cognome'];
     $user->numero_documento = $_POST['numero_documento'];
-    $user->id = $_POST['id'];
+    $user->id = $data['id'];
     $user->via = $_POST['via'];
     $user->provincia = $_POST['provincia'];
     $user->citta = $_POST['citta'];
