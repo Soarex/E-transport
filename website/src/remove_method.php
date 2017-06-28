@@ -16,12 +16,12 @@
 
     $result = $database->query(
         "DELETE FROM indirizzo
-        WHERE id=".$data['id_indrizzo']
+        WHERE id=".$data['id_indirizzo']
     );
 
     if($result == false) {
         $database->close();
-        echo "<script>alert('Errore'); window.location.href='../index.html';</script>";
+        echo "Errore";
     }
 
     $result = $database->query(
@@ -31,7 +31,7 @@
 
     if($result == false) {
         $database->close();
-        echo "<script>alert('Errore'); window.location.href='../index.html';</script>";
+        echo "Errore";
     }
 
     $database->close();
